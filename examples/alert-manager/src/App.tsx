@@ -1,7 +1,7 @@
-import Alerts from "./components/Alerts";
-import Logo from "./components/Logo";
-import Buttons from "./components/Buttons";
-import "./index.css";
+import Alerts from './components/Alerts';
+import Logo from './components/Logo';
+import Buttons from './components/Buttons';
+import './index.css';
 import React from 'react';
 
 export default function App() {

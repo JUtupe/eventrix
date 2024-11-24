@@ -1,9 +1,9 @@
-import { Eventrix } from "eventrix";
-import usersEventsReceiver from "./users";
+import { Eventrix } from 'eventrix';
+import usersEventsReceiver from './users';
 
 const initialState = {
-  user: {},
-  users: []
+    user: {},
+    users: [],
 };
 
 const eventsReceivers = [usersEventsReceiver];

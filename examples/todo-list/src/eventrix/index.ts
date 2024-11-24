@@ -1,8 +1,8 @@
-import { Eventrix } from "eventrix";
-import taskEventsReceivers from "./tasks";
+import { Eventrix } from 'eventrix';
+import taskEventsReceivers from './tasks';
 
 const initialState = {
-  tasks: []
+    tasks: [],
 };
 
 export default new Eventrix(initialState, taskEventsReceivers);

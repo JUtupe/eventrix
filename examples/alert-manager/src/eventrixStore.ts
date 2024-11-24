@@ -1,4 +1,4 @@
-import Eventrix from "eventrix";
+import Eventrix from 'eventrix';
 
 const eventrixStore = new Eventrix();
 
