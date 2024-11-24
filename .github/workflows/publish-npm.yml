@@ -1,4 +1,4 @@
-name: eventrixStore
+name: eventrix
 on:
   release:
     types: [created]

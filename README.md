@@ -14,7 +14,7 @@ STATE MANAGEMENT FOR **REACT** AND **REACT NATIVE** APPS
 # Installation
 
 ```bash
-$ npm install eventrixStore --save
+$ npm install eventrix --save
 ```
 
 # Documentation
@@ -29,14 +29,14 @@ $ npm install eventrixStore --save
 
 # Home page
 
-We have website dedicated to eventrixStore. Go to [**eventrixStore.io**](https://eventrix.io) and see what eventrixStore has to offer.
+We have website dedicated to eventrix. Go to [**eventrix.io**](https://eventrix.io) and see what eventrix has to offer.
 
 # Quickstart
 
 ```js
 // eventrixStore.js
 
-import { Eventrix } from 'eventrixStore';
+import { Eventrix } from 'eventrix';
 import receiversList from './receivers';
 
 const initialState = {
@@ -52,13 +52,13 @@ export default eventrixStore;
 
 import { StrictMode } from "react";
 import ReactDOM from "react-dom";
-import { EventrixProvider } from 'eventrixStore';
+import { EventrixProvider } from 'eventrix';
 import eventrixStore from './eventrixStore';
 
 const rootElement = document.getElementById("root");
 ReactDOM.render(
     <StrictMode>
-      <EventrixProvider eventrixStore={eventrixStore}>
+      <EventrixProvider eventrix={eventrixStore}>
         <UsersList />
       </EventrixProvider>
     </StrictMode>,
@@ -70,7 +70,7 @@ ReactDOM.render(
 // UsersList.jsx
 
 import React, { useCallback } from 'react';
-import { useEventrixState, useEmit } from 'eventrixStore';
+import { useEventrixState, useEmit } from 'eventrix';
 
 
 const UsersList = () => {
@@ -95,7 +95,7 @@ const UsersList = () => {
 // receivers.js
 
 import axios from 'axios';
-import { EventsReceiver } from 'eventrixStore';
+import { EventsReceiver } from 'eventrix';
 
 const fetchUsersReceiver = new EventsReceiver('fetchUsers', (eventName, eventData, stateManager) => {
     return axios.get('https://myDomain.com/users').then((response) => {
@@ -146,8 +146,8 @@ Greater control of data flow thanks to additional tools (devtools) and a small t
 
 # License
 
-eventrixStore package are [MIT licensed](https://github.com/rstgroup/eventrix/blob/master/LICENSE)
+eventrix package are [MIT licensed](https://github.com/rstgroup/eventrix/blob/master/LICENSE)
 
 # Powered by
 
-[RST Software](https://rst.software) look on RST [Github](https://github.com/rstgroup)
+[RST Software](https://rst.software), see our [Github](https://github.com/rstgroup)

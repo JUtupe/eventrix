@@ -5,7 +5,7 @@ import useEvent from '../hooks/useEvent';
 import EventrixScope from '../context/EventrixScope';
 import { defaultEventrixInstance } from './context';
 
-describe('context with default eventrixStore instance', () => {
+describe('context with default eventrix instance', () => {
     const ItemComponent = ({ callback }: any) => {
         useEvent('testEvent', callback);
         return <div>Test Item Component</div>;

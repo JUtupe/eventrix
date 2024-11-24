@@ -83,14 +83,14 @@ describe('Eventrix', () => {
         expect(mockListener).toHaveBeenCalledWith('test', []);
         expect(eventrix.getState('bar')).toEqual(newbarState);
     });
-    it('should create new eventrixStore instance with event scope', () => {
+    it('should create new eventrix instance with event scope', () => {
         const mockedListener = jest.fn();
         eventrix.listen('Test:setTest', mockedListener);
         const testInstance = eventrix.create({ eventScope: 'Test' });
         testInstance.emit('setTest', 'test');
         expect(mockedListener).toHaveBeenCalledWith('test', []);
     });
-    it('should create new second level eventrixStore instance with event scope', () => {
+    it('should create new second level eventrix instance with event scope', () => {
         const mockedListener = jest.fn();
         eventrix.listen('Test:List:setTest', mockedListener);
         const testInstance = eventrix.create({ eventScope: 'Test' });
@@ -98,11 +98,11 @@ describe('Eventrix', () => {
         testListInstance.emit('setTest', 'test');
         expect(mockedListener).toHaveBeenCalledWith('test', []);
     });
-    it('should create new eventrixStore instance with state scope', () => {
+    it('should create new eventrix instance with state scope', () => {
         const testInstance = eventrix.create({ stateScope: 'scope1' });
         expect(testInstance.getState('scope2')).toEqual(initialState.scope1.scope2);
     });
-    it('should create new second level eventrixStore instance with state scope', () => {
+    it('should create new second level eventrix instance with state scope', () => {
         const scopedInstance = eventrix.create({ stateScope: 'scope1' });
         const scopedInstance2 = scopedInstance.create({ stateScope: 'scope2' });
         expect(scopedInstance2.getState('scope3')).toEqual(initialState.scope1.scope2.scope3);
