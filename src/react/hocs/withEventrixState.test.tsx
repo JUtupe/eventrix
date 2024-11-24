@@ -37,7 +37,7 @@ describe('withEventrixState', () => {
 
     const TestContainer = ({ eventrix, children }: any) => <EventrixProvider eventrix={eventrix}>{children}</EventrixProvider>;
 
-    it('should change state when eventrix state has changed', async () => {
+    it('should change state when eventrixStore state has changed', async () => {
         const initialState = {
             foo: '',
             bar: {
@@ -86,7 +86,7 @@ describe('withEventrixState', () => {
         expect(getByTestId('testBarBarFoo').textContent).toEqual('newBarBarFoo');
     });
 
-    it('should change state when eventrix state has changed with scope', async () => {
+    it('should change state when eventrixStore state has changed with scope', async () => {
         const initialState = {
             scope1: {
                 foo: 'foo1',

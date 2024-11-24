@@ -41,7 +41,7 @@ describe('useEventrixState', () => {
 
     const TestContainer = ({ eventrix, children }: any) => <EventrixProvider eventrix={eventrix}>{children}</EventrixProvider>;
 
-    it('should change state when eventrix state has changed', async () => {
+    it('should change state when eventrixStore state has changed', async () => {
         const initialState = {
             foo: {
                 title: 'fooTitle1',
@@ -89,7 +89,7 @@ describe('useEventrixState', () => {
         expect(getByTestId('testData').textContent).toEqual(secondTestData);
     });
 
-    it('should change state when eventrix state has changed with scope', async () => {
+    it('should change state when eventrixStore state has changed with scope', async () => {
         const initialState = {
             testScope: {
                 foo: {
@@ -142,7 +142,7 @@ describe('useEventrixState', () => {
         expect(getByTestId('testData').textContent).toEqual(secondTestData);
     });
 
-    it('should change state when eventrix state has changed with deep scope', async () => {
+    it('should change state when eventrixStore state has changed with deep scope', async () => {
         const initialState = {
             scopeLvl1: {
                 testScope: {

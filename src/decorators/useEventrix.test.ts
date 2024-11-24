@@ -3,7 +3,7 @@ import Eventrix from '../Eventrix';
 import { EventrixI } from '../interfaces';
 
 describe('useEventrix', () => {
-    it('should add eventrix to class instance', () => {
+    it('should add eventrixStore to class instance', () => {
         @useEventrix
         class FetchToStateTestClass {
             ajax: any;

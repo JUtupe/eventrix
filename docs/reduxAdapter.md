@@ -1,6 +1,6 @@
 ### Redux adapter
 
-If you use Redux you can use redux-adapter from `eventrix/redux-adapter`
+If you use Redux you can use redux-adapter from `eventrixStore/redux-adapter`
 
 ##### Adapters list:
 - `createStore`
@@ -8,5 +8,5 @@ If you use Redux you can use redux-adapter from `eventrix/redux-adapter`
 - `connect`
 
 ```jsx harmony
-import { createStore, combineReducers, connect } from 'eventrix/redux-adapter';
+import { createStore, combineReducers, connect } from 'eventrixStore/redux-adapter';
 ```

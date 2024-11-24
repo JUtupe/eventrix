@@ -23,7 +23,7 @@ describe('listener', () => {
         <EventrixProvider eventrix={eventrix}>{children}</EventrixProvider>
     );
 
-    it('should use eventrix context and extend component by eventrix', () => {
+    it('should use eventrixStore context and extend component by eventrixStore', () => {
         const eventrixInstance = new Eventrix({});
         const callbackMock = jest.fn();
 

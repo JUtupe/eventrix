@@ -43,7 +43,7 @@ describe('eventrixState', () => {
 
     const TestContainer = ({ eventrix, children }: any) => <EventrixProvider eventrix={eventrix}>{children}</EventrixProvider>;
 
-    it('should change component state when eventrix state changed', async () => {
+    it('should change component state when eventrixStore state changed', async () => {
         const eventrixInstance = new Eventrix({
             foo: {
                 bar: 'empty',
@@ -63,7 +63,7 @@ describe('eventrixState', () => {
         expect(getByTestId('stateData').textContent).toEqual('test');
     });
 
-    it('should change component state when eventrix state changed and component has own state', async () => {
+    it('should change component state when eventrixStore state changed and component has own state', async () => {
         const eventrixInstance = new Eventrix({
             foo: {
                 bar: 'empty',

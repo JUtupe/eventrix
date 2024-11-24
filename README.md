@@ -1,23 +1,23 @@
 ![Eventrix](assets/logo_br.svg)
 
-STATE MANAGMENT FOR **REACT** AND **REACT NATIVE** APPS
+STATE MANAGEMENT FOR **REACT** AND **REACT NATIVE** APPS
 
 [![Build Status](https://travis-ci.org/rstgroup/eventrix.svg?branch=master)](https://travis-ci.org/rstgroup/eventrix)
 [![npm](https://img.shields.io/npm/l/eventrix.svg)](https://npmjs.org/package/eventrix)
 [![npm](https://img.shields.io/npm/v/eventrix.svg)](https://npmjs.org/package/eventrix)
 
-### Support
+# Support
 - React
 - React Native
 - SSR (Next.js)
 
-### Installation
+# Installation
 
 ```bash
-$ npm install eventrix --save
+$ npm install eventrixStore --save
 ```
 
-### Documentation
+# Documentation
 
 [**Get started**](https://eventrix.gitbook.io/eventrix/getting-started)
 |
@@ -27,15 +27,16 @@ $ npm install eventrix --save
 |
 [**Demo**](https://eventrix.gitbook.io/eventrix/demo)
 
-### Home page
+# Home page
 
-We have website dedicated to eventrix. Go to [**eventrix.io**](https://eventrix.io) and see what eventrix has to offer.
+We have website dedicated to eventrixStore. Go to [**eventrixStore.io**](https://eventrix.io) and see what eventrixStore has to offer.
 
-### Quickstart
+# Quickstart
 
-eventrixStore.js
 ```js
-import { Eventrix } from 'eventrix';
+// eventrixStore.js
+
+import { Eventrix } from 'eventrixStore';
 import receiversList from './receivers';
 
 const initialState = {
@@ -46,17 +47,18 @@ const eventrixStore = new Eventrix(initialState, receiversList);
 export default eventrixStore;
 ```
 
-App.jsx
 ```jsx harmony
+// App.tsx
+
 import { StrictMode } from "react";
 import ReactDOM from "react-dom";
-import { EventrixProvider } from 'eventrix';
+import { EventrixProvider } from 'eventrixStore';
 import eventrixStore from './eventrixStore';
 
 const rootElement = document.getElementById("root");
 ReactDOM.render(
     <StrictMode>
-      <EventrixProvider eventrix={eventrixStore}>
+      <EventrixProvider eventrixStore={eventrixStore}>
         <UsersList />
       </EventrixProvider>
     </StrictMode>,
@@ -64,10 +66,11 @@ ReactDOM.render(
 );
 ```
 
-UsersList.jsx
 ```jsx harmony
+// UsersList.jsx
+
 import React, { useCallback } from 'react';
-import { useEventrixState, useEmit } from 'eventrix';
+import { useEventrixState, useEmit } from 'eventrixStore';
 
 
 const UsersList = () => {
@@ -88,10 +91,11 @@ const UsersList = () => {
 }
 ```
 
-receivers.js
 ```js
+// receivers.js
+
 import axios from 'axios';
-import { EventsReceiver } from 'eventrix';
+import { EventsReceiver } from 'eventrixStore';
 
 const fetchUsersReceiver = new EventsReceiver('fetchUsers', (eventName, eventData, stateManager) => {
     return axios.get('https://myDomain.com/users').then((response) => {
@@ -105,7 +109,9 @@ const receiversList = [fetchUsersReceiver];
 export default receiversList;
 ```
 
-### About
+For more usage examples see the `examples` directory.
+
+# About
 
 [Eventrix](https://eventrix.io/) is a scaling and predictable JS library for state managing and centralizing application global state.
 
@@ -131,17 +137,17 @@ Greater control of data flow thanks to additional tools (devtools) and a small t
 [Eventrix DevTools](https://github.com/rstgroup/eventrix-devtools)
 
 
-### Contribute
+# Contribute
 
 - use eslint rules
 - write clean code
 - unit tests (min 85% of your code should be tested)
 - [code of conduct](https://github.com/rstgroup/eventrix/blob/master/docs/code_of_conduct.md)
 
-### License
+# License
 
-eventrix package are [MIT licensed](https://github.com/rstgroup/eventrix/blob/master/LICENSE)
+eventrixStore package are [MIT licensed](https://github.com/rstgroup/eventrix/blob/master/LICENSE)
 
-### Powered by
+# Powered by
 
-[RST Software Masters](https://rst.software) look on RST [Github](https://github.com/rstgroup)
+[RST Software](https://rst.software) look on RST [Github](https://github.com/rstgroup)
