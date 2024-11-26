@@ -1,0 +1,56 @@
+{
+  "name": "eventrix-tools",
+  "version": "2.0.0",
+  "description": "Eventrix devtools",
+  "main": "index.js",
+  "private": true,
+  "scripts": {
+    "test": "jest",
+    "start": "vite",
+    "build": "vite build"
+  },
+  "author": "",
+  "license": "MIT",
+  "dependencies": {
+    "@emotion/react": "^11.11.1",
+    "@emotion/styled": "^11.11.0",
+    "@iconify/react": "^4.1.1",
+    "@mui/material": "^5.14.3",
+    "classnames": "^2.3.2",
+    "eventrix": "*",
+    "lodash": "^4.17.21",
+    "moment": "^2.29.1",
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0",
+    "react-inspector": "^6.0.2",
+    "react-router": "^6.3.0",
+    "react-router-dom": "^6.3.0"
+  },
+  "devDependencies": {
+    "@types/react": "^18.2.15",
+    "@types/react-dom": "^18.2.7",
+    "@vitejs/plugin-react-swc": "^3.3.2",
+    "eslint": "^8.45.0",
+    "eslint-plugin-react": "^7.32.2",
+    "eslint-plugin-react-hooks": "^4.6.0",
+    "eslint-plugin-react-refresh": "^0.4.3",
+    "sass": "^1.68.0",
+    "vite": "^5.4.10"
+  },
+  "jest": {
+    "verbose": true,
+    "collectCoverage": true,
+    "collectCoverageFrom": [
+      "src/**/*.{js,jsx}"
+    ],
+    "moduleDirectories": [
+      "src/",
+      "node_modules/"
+    ],
+    "coveragePathIgnorePatterns": [
+      "./src/mocks/",
+      "./node_modules/",
+      "index.js"
+    ]
+  }
+}

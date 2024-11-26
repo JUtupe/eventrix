@@ -1,0 +1,14 @@
+.idea/
+node_modules/
+coverage/
+/index.js
+/index.map
+/dist
+/redux-adapter
+/react
+/decorators
+/types
+/dist
+/demo
+package-lock.json
+yarn.lock
