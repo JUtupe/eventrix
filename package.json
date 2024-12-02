@@ -2,11 +2,7 @@
   "name": "eventrix-monorepo",
   "private": true,
   "workspaces": [
-    "packages/eventrix",
-    "packages/eventrix-devtools",
-    "packages/example-todo-list",
-    "packages/example-forms",
-    "packages/example-alert-manager"
+    "packages/*"
   ],
   "scripts": {
   },

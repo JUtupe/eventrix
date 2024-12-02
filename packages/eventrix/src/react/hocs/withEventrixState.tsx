@@ -31,7 +31,7 @@ function withEventrixState<StatePropsI = StateI, ComponentPropsI = PropsI>(
 ): React.ComponentType<ComponentPropsI> {
     return class WithEventrixState extends React.Component<ComponentPropsI, StateI> {
         static contextType = Context;
-        context: EventrixContextI;
+        declare context: EventrixContextI;
         state: StateI = {};
         stateNames: string[] = [];
         listeners: ListenersI = {};

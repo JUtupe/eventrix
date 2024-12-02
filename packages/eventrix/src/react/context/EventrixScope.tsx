@@ -18,11 +18,7 @@ const EventrixScope: React.FC<EventrixProviderPropsI> = ({ event = '', eventSepa
             eventSeparator,
         });
     }, [eventrix, event, eventSeparator, state]);
-    return (
-        <EventrixProvider eventrix={scopedEventrixInstance} test={''}>
-            {children}
-        </EventrixProvider>
-    );
+    return <EventrixProvider eventrix={scopedEventrixInstance}>{children}</EventrixProvider>;
 };
 
 export default EventrixScope;

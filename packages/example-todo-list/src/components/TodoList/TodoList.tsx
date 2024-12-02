@@ -3,7 +3,7 @@ import Task from '../Task';
 import './TodoList.css';
 import { useEventrixState } from 'eventrix';
 
-const TodoList = () => {
+const TodoList: React.FC = () => {
     const [tasks] = useEventrixState<any[]>('tasks');
     const [statusFilter, setStatusFilter] = useEventrixState('filter.status');
     const tasksList = statusFilter ? tasks.filter((task) => task.status === statusFilter) : tasks;

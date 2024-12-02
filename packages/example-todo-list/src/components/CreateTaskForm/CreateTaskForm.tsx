@@ -4,7 +4,7 @@ import { makeid } from '../../utils/helpers';
 import './CreateTaskForm.css';
 import { useEmit } from 'eventrix';
 
-const CreateTaskForm = () => {
+const CreateTaskForm: React.FC = () => {
     const emit = useEmit();
     const [title, setTitle] = useState('');
 

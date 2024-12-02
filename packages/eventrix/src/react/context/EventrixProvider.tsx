@@ -4,7 +4,6 @@ import { EventrixI } from '../../interfaces';
 
 export interface EventrixProviderPropsI {
     eventrix: EventrixI;
-    test: string;
     children: React.ReactNode;
 }
 
